@@ -1,0 +1,27 @@
+Esboço do Design da API:
+
+--
+
+*Root route: por enquanto, quero que ela apenas responda 'isso está funcionando'
+
+-->res = this is working
+
+
+*SignIn route: provavelmente uma POST request pois os usuários irão enviar login e senha. Vai responder success ou fail.
+
+/sigin --> POST = success/fail
+
+
+*Resgister route: POST também pois queremos adicionar os dados do usuário ao nosso servidor. Vai devolver o novo usário criado para certificarmos que tudo está funcionando
+
+/register --> POST = user
+
+
+*Profile route: cada usuário deve ter sua home screen, então teremos um parâmetro userId
+
+/profile/:userid --> GET = user
+
+
+*Image route: cada vez que o usuário manda uma imagem, atualiza seu score
+
+/image -> PUT --> user (updated)
